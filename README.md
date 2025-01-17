@@ -23,5 +23,5 @@ Welcome to the **TypeScript Tutorial** repository! This project is designed to h
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/<your-username>/typescript-tutorial.git
-   cd typescript-tutorial
+   git clone https://github.com/<your-username>/typescript-tutorial-2.git
+   cd typescript-tutorial-2
