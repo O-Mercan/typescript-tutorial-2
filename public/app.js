@@ -1,10 +1,13 @@
 "use strict";
 // CLASSES
 class Invoice {
-    constructor(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
+    // readonly client: string;
+    // private details: string;
+    // public amount: number;
+    constructor(client, details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
     }
     format() {
         return `${this.client} ows $${this.amount} for ${this.details}`;
@@ -15,17 +18,15 @@ const invTwo = new Invoice("luigi", "work on the luigi website", 300);
 let invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
-invOne.client = 'yoshi';
-invTwo.amount = 400;
-console.log(invOne, invTwo);
-console.log(invoices);
-const form = document.querySelector(".new-item-form");
+invoices.forEach(inv => {
+    console.log(inv.client, inv.amount, inv.format());
+});
 // INPUTS
 const type = document.querySelector("#type");
 const tofrom = document.querySelector("#tofrom");
 const details = document.querySelector("#details");
 const amount = document.querySelector("#amount");
-form.addEventListener("submit", (e) => {
+tofrom.addEventListener("submit", (e) => {
     e.preventDefault();
     console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 });
